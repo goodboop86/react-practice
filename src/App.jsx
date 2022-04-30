@@ -12,7 +12,7 @@ export const App = () => {
     setIsLoading(true);
     setIsError(false);
 
-    axios.get("https://example.com/users")
+    axios.get("https://demo1669765.mockable.io/react")
       .then(result => {
         const users = result.data.map(user => ({
           id: user.id,
@@ -32,7 +32,7 @@ export const App = () => {
       {isError && <p style={{ color: "red" }}>エラー発生しました。</p>}
       {isLoading ? (<p>データ取得中です</p>
       ) : (userList.map(user => (
-        <p key={user.id}>{`${user.id}(${user.age}歳)`}</p>
+        <p key={user.id}>{`${user.id}:${user.name}(${user.age}歳)`}</p>
       ))
       )}
     </div>
