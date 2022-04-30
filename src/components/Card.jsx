@@ -13,15 +13,13 @@ const style = {
 };
 
 export const Card = props => {
-    console.log("Child1レンダリング");
-
-    const { isAdmin } = props;
+    console.log("Cardレンダリング");
 
     return (
         <div style={style}>
             <p>山田太郎</p>
             {/*↓渡された関数を実行するボタンを設置*/}
-            <EditButton isAdmin={(isAdmin)} />
+            <EditButton />
         </div>
     );
 };
